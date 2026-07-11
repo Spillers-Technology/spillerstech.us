@@ -18,8 +18,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css?family=Rokkitt:400,500,600,700|Lato:300,400,700,900" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/lightbox.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0d10'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='28' font-weight='bold' text-anchor='middle' fill='%23e8973a'%3EST%3C/text%3E%3C/svg%3E">
 <script defer src="https://unpkg.com/feather-icons"></script>
+<script defer src="assets/lightbox.js"></script>
 
 <!-- Privacy-safe, self-hosted product analytics. Form fields, numbers, and email addresses are obscured. -->
 <script>
@@ -100,9 +102,9 @@
 
     <div class="showcaseGrid">
       <article class="showcaseCard">
-        <a class="productShot" href="https://spillerstech.us/AnchorDesk/" target="_blank" rel="noopener">
+        <button class="productShot lightbox-trigger" type="button" data-lightbox>
           <img src="assets/anchordesk-board.jpg" alt="AnchorDesk ticket board with SLA, assignee, source, and sync state" width="1440" height="960">
-        </a>
+        </button>
         <div class="showcaseBody">
           <div class="productMeta"><span class="statusPill"><span></span> Managed or self-hosted</span><span>MIT</span></div>
           <h3>AnchorDesk</h3>
@@ -117,9 +119,9 @@
       </article>
 
       <article class="showcaseCard">
-        <a class="productShot" href="https://spillerstech.us/ComFlow/" target="_blank" rel="noopener">
+        <button class="productShot lightbox-trigger" type="button" data-lightbox>
           <img src="assets/comflow-inbox.jpg" alt="ComFlow inbox with a structured voicemail summary and triage state" width="1440" height="960">
-        </a>
+        </button>
         <div class="showcaseBody">
           <div class="productMeta"><span class="statusPill"><span></span> Running our line</span><span>Containerized</span></div>
           <h3>ComFlow</h3>
@@ -159,7 +161,9 @@
 
     <div class="openGrid">
       <article class="openCard featuredOpen">
-        <img src="assets/netviz-graph.png" alt="NetViz graph view grouping discovered network devices" loading="lazy">
+        <button class="lightbox-trigger" type="button" data-lightbox>
+          <img src="assets/netviz-graph.png" alt="NetViz graph view grouping discovered network devices" loading="lazy">
+        </button>
         <div><span class="openTag">Go · Wails · MIT</span><h3>NetViz</h3><p>Fast, visual LAN discovery with desktop builds for Windows, macOS, and Linux. No account, agent, or Nmap required.</p><div class="openActions"><a href="https://github.com/Spillers-Technology/netviz/releases/latest" target="_blank" rel="noopener">Download <i data-feather="download"></i></a><a href="https://github.com/Spillers-Technology/netviz" target="_blank" rel="noopener">Source <i data-feather="github"></i></a></div></div>
       </article>
       <article class="openCard"><span class="openIcon"><i data-feather="cloud"></i></span><span class="openTag">ASP.NET Core · React</span><h3>Partner Center Bridge</h3><p>Cross-tenant Microsoft Graph and Partner Center workflows without the portal archaeology.</p><div class="openActions"><a href="https://spillerstech.us/PartnerCenterBridge/" target="_blank" rel="noopener">Explore</a><a href="https://github.com/Spillers-Technology/PartnerCenterBridge" target="_blank" rel="noopener">Source</a></div></article>
