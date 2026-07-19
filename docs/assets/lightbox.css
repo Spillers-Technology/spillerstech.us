@@ -24,7 +24,7 @@
 }
 
 .lightbox-trigger:focus-visible {
-  outline: 3px solid #f4a340;
+  outline: 3px solid #ffe2a9;
   outline-offset: 4px;
 }
 
@@ -119,6 +119,11 @@
   cursor: zoom-out;
 }
 
+.image-lightbox__image:focus-visible {
+  outline: 3px solid #ffe2a9;
+  outline-offset: 4px;
+}
+
 .image-lightbox__close {
   position: fixed;
   z-index: 3;
@@ -140,8 +145,8 @@
 
 .image-lightbox__close:hover,
 .image-lightbox__close:focus-visible {
-  border-color: #f4a340;
-  color: #ffc371;
+  border-color: #e8bd72;
+  color: #ffe2a9;
   outline: none;
 }
 

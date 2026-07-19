@@ -1,208 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Spillers Technology — Software for the Work Behind the Work</title>
-<meta name="description" content="Spillers Technology is Joseph Spillers' independent software studio for IT operations: self-hosted helpdesk, voice workflow, network discovery, MSP automation, and custom internal tools.">
-<link rel="canonical" href="https://spillerstech.us/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <title>Spillers Technology — Operational Software, Tailored to the Work</title>
+  <meta name="description" content="Founder-led software for service desks, voice workflows, network discovery, and the operational work between them.">
+  <link rel="canonical" href="https://spillerstech.us/">
 
-<meta property="og:title" content="Spillers Technology — Built in the Queue">
-<meta property="og:description" content="Real operations software from a support engineer who got tired of waiting for the right tool to exist.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://spillerstech.us/">
-<meta property="og:image" content="https://spillerstech.us/assets/anchordesk-board.jpg">
-<meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="Spillers Technology — Operational Software, Tailored to the Work">
+  <meta property="og:description" content="Focused, self-hostable tools for MSPs and internal IT teams—built from real operational friction.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://spillerstech.us/">
+  <meta property="og:image" content="https://spillerstech.us/assets/spillerstech-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Spillers Technology on a satin-black background with the line Operational software, tailored to the work">
+  <meta name="twitter:card" content="summary_large_image">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css?family=Rokkitt:400,500,600,700|Lato:300,400,700,900" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="assets/lightbox.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b0d10'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='28' font-weight='bold' text-anchor='middle' fill='%23e8973a'%3EST%3C/text%3E%3C/svg%3E">
-<script defer src="https://unpkg.com/feather-icons"></script>
-<script defer src="assets/lightbox.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/lightbox.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2309090b'/%3E%3Cpath d='M8 14 32 5l24 9-6 39H14Z' fill='none' stroke='%23e8bd72' stroke-width='2'/%3E%3Ctext x='32' y='40' font-family='Georgia,serif' font-size='23' font-weight='bold' text-anchor='middle' fill='%23f8f3eb'%3EST%3C/text%3E%3C/svg%3E">
+  <script defer src="assets/site.js"></script>
+  <script defer src="assets/lightbox.js"></script>
 
-<!-- Privacy-safe, self-hosted product analytics. Form fields, numbers, and email addresses are obscured. -->
-<script>
-  var initOpts = {
-    projectKey: "vQsdaVKqB3x2jUBKW4xd",
-    ingestPoint: "https://replay.spillerstech.us/ingest",
-    defaultInputMode: 2,
-    obscureTextNumbers: true,
-    obscureTextEmails: true
-  };
-  var startOpts = { userID: "" };
-  (function(A,s,a,y,e,r){
-    r=window.OpenReplay=[e,r,y,[s-1,e]];
-    s=document.createElement('script');s.src=A;s.async=!a;
-    document.getElementsByTagName('head')[0].appendChild(s);
-    r.start=function(){r.push([0])};r.stop=function(){r.push([1])};
-    r.setUserID=function(id){r.push([2,id])};r.setUserAnonymousID=function(id){r.push([3,id])};
-    r.setMetadata=function(k,v){r.push([4,k,v])};r.event=function(k,p,i){r.push([5,k,p,i])};
-    r.issue=function(k,p){r.push([6,k,p])};r.isActive=function(){return false};r.getSessionToken=function(){};
-  })("//static.openreplay.com/18.0.17/openreplay-assist.js",1,0,initOpts,startOpts);
-  OpenReplay.start();
-  OpenReplay.setMetadata("project", "storefront");
-</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Spillers Technology",
+    "url": "https://spillerstech.us/",
+    "description": "An independent software studio building operational tools for MSPs and internal IT teams.",
+    "founder": {
+      "@type": "Person",
+      "name": "Joseph Spillers"
+    },
+    "sameAs": [
+      "https://github.com/Spillers-Technology",
+      "https://www.linkedin.com/in/joseph-spillers-ba6a491b5/"
+    ]
+  }
+  </script>
+
+  <!-- OpenReplay is configured to obscure input values, email addresses, and numbers. See /privacy.html. -->
+  <script>
+    if (window.location.protocol === "https:") {
+    var initOpts = {
+      projectKey: "vQsdaVKqB3x2jUBKW4xd",
+      ingestPoint: "https://replay.spillerstech.us/ingest",
+      defaultInputMode: 2,
+      obscureTextNumbers: true,
+      obscureTextEmails: true
+    };
+    var startOpts = { userID: "" };
+    (function(A,s,a,y,e,r){
+      r=window.OpenReplay=[e,r,y,[s-1,e]];
+      s=document.createElement('script');s.src=A;s.async=!a;
+      document.getElementsByTagName('head')[0].appendChild(s);
+      r.start=function(){r.push([0])};r.stop=function(){r.push([1])};
+      r.setUserID=function(id){r.push([2,id])};r.setUserAnonymousID=function(id){r.push([3,id])};
+      r.setMetadata=function(k,v){r.push([4,k,v])};r.event=function(k,p,i){r.push([5,k,p,i])};
+      r.issue=function(k,p){r.push([6,k,p])};r.isActive=function(){return false};r.getSessionToken=function(){};
+    })("//static.openreplay.com/18.0.17/openreplay-assist.js",1,0,initOpts,startOpts);
+    OpenReplay.start();
+    OpenReplay.setMetadata("project", "storefront");
+    }
+  </script>
 </head>
 <body id="top">
+  <a class="skipLink" href="#main-content">Skip to main content</a>
 
-<header class="topbar">
-  <a class="wordmark" href="#top" aria-label="Spillers Technology home">
-    <span class="mark">ST</span>
-    <span class="wordmarkText">Spillers <strong>Technology</strong></span>
-  </a>
-  <nav class="topnav" aria-label="Main navigation">
-    <a href="#products">Products</a>
-    <a href="#proof">Proof</a>
-    <a href="#opensource">Open source</a>
-    <a href="#about">About</a>
-  </nav>
-  <a class="topCta" href="mailto:help@spillerstech.us?subject=Let's%20build%20something">Start a conversation <span aria-hidden="true">↗</span></a>
-</header>
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="ST Spillers Technology home">
+      <span class="mark" aria-hidden="true">ST</span>
+      <span class="wordmarkText">Spillers <strong>Technology</strong></span>
+    </a>
 
-<main>
-  <section class="hero">
-    <div class="heroCopy">
-      <p class="kicker"><span class="liveDot"></span> Independent software studio · Indianapolis</p>
-      <h1>Software for the work <span class="accent">behind the work.</span></h1>
-      <p class="heroLead">Spillers Technology turns IT support pain into working products: ticketing that knows the machines, voicemail that becomes action, and the automation in between.</p>
+    <nav class="topnav" aria-label="Main navigation">
+      <a href="#products">Products</a>
+      <a href="#collection">Collection</a>
+      <a href="#services">Custom work</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <a class="topCta" href="mailto:help@spillerstech.us?subject=Let%27s%20build%20something">Start a conversation <span aria-hidden="true">↗</span></a>
+
+    <details class="mobileMenu">
+      <summary aria-label="Open navigation"><span></span><span></span></summary>
+      <nav aria-label="Mobile navigation">
+        <a href="#products">Products</a>
+        <a href="#collection">Collection</a>
+        <a href="#services">Custom work</a>
+        <a href="#about">About</a>
+        <a href="mailto:help@spillerstech.us?subject=Let%27s%20build%20something">Start a conversation ↗</a>
+      </nav>
+    </details>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <span class="heroGlow heroGlowOne" aria-hidden="true"></span>
+      <span class="heroGlow heroGlowTwo" aria-hidden="true"></span>
+      <span class="glint glintOne" aria-hidden="true">✦</span>
+      <span class="glint glintTwo" aria-hidden="true">✦</span>
+
+      <div class="heroCopy">
+        <p class="kicker"><span class="liveDot" aria-hidden="true"></span> Independent software studio · Indianapolis</p>
+        <h1 id="hero-title">Operational software, <em>tailored to the work.</em></h1>
+        <p class="heroLead">Spillers Technology builds focused tools for MSPs and internal IT teams: a service desk that knows the devices, voicemail that becomes actionable work, and utilities for the gaps between them.</p>
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="#products">Explore the products <span aria-hidden="true">↓</span></a>
+          <a class="btn btnGhost" href="https://github.com/Spillers-Technology" target="_blank" rel="noopener">View public source <span aria-hidden="true">↗</span></a>
+        </div>
+        <ul class="heroNotes" aria-label="Studio principles">
+          <li>Self-hostable products</li>
+          <li>Visible release history</li>
+          <li>Direct human support</li>
+        </ul>
+      </div>
+
+      <aside class="releaseConsole" aria-label="Current product collection">
+        <div class="consoleLapel" aria-hidden="true"></div>
+        <div class="consoleHead">
+          <span>The current collection</span>
+          <span class="consoleStatus"><i aria-hidden="true"></i> Shipping</span>
+        </div>
+        <div class="releaseList">
+          <a href="https://github.com/Spillers-Technology/AnchorDesk/releases/latest" target="_blank" rel="noopener">
+            <span class="productGlyph glyphGold" aria-hidden="true">A</span>
+            <span><strong>AnchorDesk</strong><small>Service desk + device context</small></span>
+            <b>Latest ↗</b>
+          </a>
+          <a href="https://github.com/Spillers-Technology/ComFlow/releases/latest" target="_blank" rel="noopener">
+            <span class="productGlyph glyphViolet" aria-hidden="true">C</span>
+            <span><strong>ComFlow</strong><small>Voice → structured work</small></span>
+            <b>Latest ↗</b>
+          </a>
+          <a href="https://github.com/Spillers-Technology/netviz/releases/latest" target="_blank" rel="noopener">
+            <span class="productGlyph glyphMint" aria-hidden="true">N</span>
+            <span><strong>NetViz</strong><small>Desktop LAN discovery</small></span>
+            <b>Desktop ↗</b>
+          </a>
+          <a href="https://github.com/Spillers-Technology/RetroSpool/releases/latest" target="_blank" rel="noopener">
+            <span class="productGlyph glyphRose" aria-hidden="true">R</span>
+            <span><strong>RetroSpool</strong><small>IBM i print data → PDF</small></span>
+            <b>Pre-1.0 ↗</b>
+          </a>
+        </div>
+        <div class="consoleFoot">
+          <span>Public repos · tagged releases</span>
+          <a href="#collection">View the full collection →</a>
+        </div>
+      </aside>
+
+      <ul class="studioRail" aria-label="What shapes the studio">
+        <li><span>01</span><strong>Operator-built</strong><small>Designed from the queue outward</small></li>
+        <li><span>02</span><strong>Self-host friendly</strong><small>Your infrastructure stays yours</small></li>
+        <li><span>03</span><strong>Source in the open</strong><small>Inspect the machinery</small></li>
+        <li><span>04</span><strong>Human supported</strong><small>Talk to the person who built it</small></li>
+      </ul>
+    </section>
+
+    <section id="products" class="band productSection" aria-labelledby="products-title">
+      <div class="sectionHead splitHead">
+        <div>
+          <p class="eyebrow">The headliners</p>
+          <h2 id="products-title">Built from real operational friction.</h2>
+        </div>
+        <p>Use the products yourself, inspect how they work, or talk to Joey about a supported deployment.</p>
+      </div>
+
+      <div class="showcaseGrid">
+        <article class="showcaseCard showcaseGold">
+          <a class="productShot lightbox-trigger" href="assets/anchordesk-board.jpg" data-lightbox>
+            <img src="assets/anchordesk-board.jpg" alt="AnchorDesk Kanban board showing ticket status, SLA, assignment, source, and sync state" width="1440" height="960">
+          </a>
+          <div class="showcaseBody">
+            <div class="productMeta"><span>MIT licensed · Self-hosted</span><span>Deployment support</span></div>
+            <h3>AnchorDesk</h3>
+            <p class="productPitch">Your service desk, anchored to your data.</p>
+            <p>Local-first ticketing for MSPs and IT teams, with email, SLA automation, device context, RMM actions, append-only audit records, and authenticated agent workflows.</p>
+            <ul class="compactPoints">
+              <li>PostgreSQL stays the source of truth</li>
+              <li>Mobile-first ticket and device workflows</li>
+              <li>Docker, Kubernetes, and GHCR releases</li>
+            </ul>
+            <div class="productActions">
+              <a class="btn btnPrimary" href="https://spillerstech.us/AnchorDesk/">Explore AnchorDesk →</a>
+              <a class="textLink" href="https://github.com/Spillers-Technology/AnchorDesk" target="_blank" rel="noopener">Source &amp; quickstart ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="showcaseCard showcaseViolet">
+          <a class="productShot lightbox-trigger" href="assets/comflow-inbox.jpg" data-lightbox>
+            <img src="assets/comflow-inbox.jpg" alt="ComFlow inbox showing structured voicemail summaries, urgency, assignment, and review state" width="1440" height="960">
+          </a>
+          <div class="showcaseBody">
+            <div class="productMeta"><span>Source available · Self-hosted</span><span>Hosted access</span></div>
+            <h3>ComFlow</h3>
+            <p class="productPitch">Voicemail that arrives ready to act on.</p>
+            <p>Receive calls over SIP, transcribe and structure each message, review everything in one inbox, and turn the right calls into AnchorDesk tickets.</p>
+            <ul class="compactPoints">
+              <li>Bring your own SIP trunk</li>
+              <li>Pluggable speech and language providers</li>
+              <li>Single-team and multi-tenant modes</li>
+            </ul>
+            <div class="productActions">
+              <a class="btn btnPrimary" href="https://com.spillerstech.us/register">Get hosted access →</a>
+              <a class="textLink" href="https://spillerstech.us/ComFlow/">Product tour →</a>
+              <a class="textLink" href="https://github.com/Spillers-Technology/ComFlow" target="_blank" rel="noopener">Source &amp; self-host ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="collection" class="lightBand" aria-labelledby="collection-title">
+      <div class="band">
+        <div class="sectionHead splitHead">
+          <div>
+            <p class="eyebrow">More from the workshop</p>
+            <h2 id="collection-title">Small tools. Sharp jobs.</h2>
+          </div>
+          <p>Clear maturity labels, direct release links, and no mystery about what is ready today.</p>
+        </div>
+
+        <div class="collectionGrid">
+          <article class="collectionCard collectionFeatured">
+            <a class="collectionShot lightbox-trigger" href="assets/netviz-graph.png" data-lightbox>
+              <img src="assets/netviz-graph.png" alt="NetViz graph view grouping discovered devices on a local network" width="2160" height="1440" loading="lazy" decoding="async">
+            </a>
+            <div class="collectionBody">
+              <span class="maturity maturityReady">Desktop release</span>
+              <h3>NetViz</h3>
+              <p>A desktop LAN scanner and network visualizer with tagged binaries and public source. Check the current release assets for available platforms.</p>
+              <div class="openActions">
+                <a href="https://spillerstech.us/netviz/">Explore →</a>
+                <a href="https://github.com/Spillers-Technology/netviz/releases/latest" target="_blank" rel="noopener">Releases ↗</a>
+                <a href="https://github.com/Spillers-Technology/netviz" target="_blank" rel="noopener">Source ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="collectionCard">
+            <span class="collectionNumber" aria-hidden="true">01</span>
+            <span class="maturity maturityBuild">Pre-1.0</span>
+            <h3>RetroSpool</h3>
+            <p>A working IBM i print-data capture and PDF pipeline with an operator console. Live queue polling and export automation remain in development.</p>
+            <div class="openActions">
+              <a href="https://spillerstech.us/RetroSpool/">Explore →</a>
+              <a href="https://github.com/Spillers-Technology/RetroSpool" target="_blank" rel="noopener">Source ↗</a>
+            </div>
+          </article>
+
+          <article class="collectionCard">
+            <span class="collectionNumber" aria-hidden="true">02</span>
+            <span class="maturity maturityEarly">Early release</span>
+            <h3>Partner Center Bridge</h3>
+            <p>Repeat cross-tenant Microsoft Graph and Partner Center operations without the portal archaeology.</p>
+            <div class="openActions">
+              <a href="https://spillerstech.us/PartnerCenterBridge/">Explore →</a>
+              <a href="https://github.com/Spillers-Technology/PartnerCenterBridge" target="_blank" rel="noopener">Source ↗</a>
+            </div>
+          </article>
+
+          <article class="collectionCard">
+            <span class="collectionNumber" aria-hidden="true">03</span>
+            <span class="maturity maturityTrial">Public trial</span>
+            <h3>OpsQuest</h3>
+            <p>Practice the technical and human sides of support in a playable ticket queue with coaching and debriefs.</p>
+            <div class="openActions">
+              <a href="https://github.com/Spillers-Technology/OpsQuest/releases/latest" target="_blank" rel="noopener">Get the app ↗</a>
+              <a href="https://github.com/Spillers-Technology/OpsQuest" target="_blank" rel="noopener">Source ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="band servicesSection" aria-labelledby="services-title">
+      <div class="serviceIntro">
+        <p class="eyebrow">Custom software</p>
+        <h2 id="services-title">Have a workflow held together by memory?</h2>
+        <p>I build internal tools, integrations, dashboards, document pipelines, and provisioning workflows around the way your team actually operates.</p>
+        <a class="btn btnPrimary" href="mailto:help@spillerstech.us?subject=I%20have%20a%20workflow%20that%20needs%20work">Tell Joey what’s stuck ↗</a>
+      </div>
+      <ol class="methodList">
+        <li><span>01</span><div><strong>Find the drag</strong><p>Start with the brittle handoff, recurring check, or queue that quietly steals the day.</p></div></li>
+        <li><span>02</span><div><strong>Make it legible</strong><p>Turn invisible state into a system people can understand, inspect, and recover.</p></div></li>
+        <li><span>03</span><div><strong>Ship the useful part</strong><p>Deliver the smallest honest tool, then improve it from real operator feedback.</p></div></li>
+      </ol>
+    </section>
+
+    <section id="about" class="band founderSection" aria-labelledby="about-title">
+      <div class="founderMark" aria-hidden="true">
+        <span class="founderGlint">✦</span>
+        <strong>JS</strong>
+        <small>BUILDER · OPERATOR</small>
+      </div>
+      <div class="founderCopy">
+        <p class="eyebrow">Founder-led by design</p>
+        <h2 id="about-title">Hi, I’m Joseph “Joey” Spillers.</h2>
+        <p class="founderLead">I’m an Indianapolis-based software builder and support engineer. My background spans MSP operations, DevOps, full-stack development, and document systems.</p>
+        <p>That mix helps me design for both the people doing the work and the systems underneath it. The goal is straightforward: software your team can understand, run, and trust on a difficult day.</p>
+        <div class="founderLinks">
+          <a href="https://spilloid.github.io" target="_blank" rel="noopener">Personal portfolio ↗</a>
+          <a href="https://www.linkedin.com/in/joseph-spillers-ba6a491b5/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/spilloid" target="_blank" rel="noopener">Personal GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="finalCta" aria-labelledby="final-cta-title">
+      <span class="finalGlint" aria-hidden="true">✦</span>
+      <p class="eyebrow">The door is open</p>
+      <h2 id="final-cta-title">Let’s make the awkward work disappear.</h2>
+      <p>Explore a product, plan a pilot, or tell me about the process your team dreads.</p>
       <div class="ctaRow">
-        <a class="btn btnPrimary" href="#products"><i data-feather="grid"></i> See what ships</a>
-        <a class="btn btnGhost" href="https://github.com/Spillers-Technology" target="_blank" rel="noopener"><i data-feather="github"></i> Inspect the source</a>
+        <a class="btn btnPrimary" href="mailto:help@spillerstech.us?subject=Let%27s%20work%20together">help@spillerstech.us ↗</a>
+        <a class="btn btnGhost" href="https://github.com/Spillers-Technology" target="_blank" rel="noopener">Browse the workshop ↗</a>
       </div>
-      <p class="heroNote">Built by an operator. Available to self-host. Supported by an actual human.</p>
-    </div>
+      <p class="phoneNote">Prefer voicemail? Call the ComFlow demo line at <a href="tel:+13158981121">(315)&nbsp;898&#8209;1121</a>. Messages may be recorded, transcribed, and reviewed.</p>
+    </section>
+  </main>
 
-    <aside class="signalCard" aria-label="Spillers Technology at a glance">
-      <div class="signalHead"><span>THE BUILD BENCH</span><span class="signalStatus">SHIPPING</span></div>
-      <div class="signalRows">
-        <a href="https://spillerstech.us/AnchorDesk/" target="_blank" rel="noopener"><i data-feather="anchor"></i><span><strong>AnchorDesk</strong><small>Helpdesk + RMM</small></span><b>v1.17</b></a>
-        <a href="https://spillerstech.us/ComFlow/" target="_blank" rel="noopener"><i data-feather="phone-call"></i><span><strong>ComFlow</strong><small>Voice → work item</small></span><b>Live</b></a>
-        <a href="https://spillerstech.us/netviz/" target="_blank" rel="noopener"><i data-feather="share-2"></i><span><strong>NetViz</strong><small>LAN discovery</small></span><b>3 OS</b></a>
-        <a href="https://github.com/Spillers-Technology/OpsQuest/releases" target="_blank" rel="noopener"><i data-feather="compass"></i><span><strong>OpsQuest</strong><small>Support training</small></span><b>Android</b></a>
-      </div>
-      <div class="signalFoot"><span><i data-feather="check-circle"></i> Source-backed claims</span><span>TypeScript · Go · .NET · Java</span></div>
-    </aside>
-  </section>
-
-  <section class="proofRail" aria-label="Selected proof points">
-    <div><strong>2,000+</strong><span>endpoints supported</span></div>
-    <div><strong>~60×</strong><span>faster document pipeline</span></div>
-    <div><strong>3 platforms</strong><span>in one NetViz release</span></div>
-    <div><strong>1 queue</strong><span>running our own support</span></div>
-  </section>
-
-  <section id="products" class="band productSection">
-    <div class="sectionHead splitHead">
-      <div><p class="eyebrow">Flagship products</p><h2>Made in the queue, not a boardroom.</h2></div>
-      <p>These started as real operational problems. Each one has working software, visible source, and a path to run it yourself.</p>
-    </div>
-
-    <div class="showcaseGrid">
-      <article class="showcaseCard">
-        <button class="productShot lightbox-trigger" type="button" data-lightbox>
-          <img src="assets/anchordesk-board.jpg" alt="AnchorDesk ticket board with SLA, assignee, source, and sync state" width="1440" height="960">
-        </button>
-        <div class="showcaseBody">
-          <div class="productMeta"><span class="statusPill"><span></span> Managed or self-hosted</span><span>MIT</span></div>
-          <h3>AnchorDesk</h3>
-          <p class="productPitch">Ticketing that knows the machines behind the ticket.</p>
-          <p>A local-first helpdesk with email, SLA tracking, device discovery, RMM actions, full audit history, and an MCP server for authenticated agent workflows.</p>
-          <ul class="compactPoints"><li>React + Fastify + PostgreSQL</li><li>Docker, Kubernetes, and GHCR releases</li><li>Datto, NinjaOne, Tactical RMM, ConnectWise, and Jira adapters</li></ul>
-          <div class="productActions">
-            <a class="btn btnPrimary" href="mailto:help@spillerstech.us?subject=AnchorDesk%20Hosting%20Pilot">Plan a pilot</a>
-            <a class="textLink" href="https://github.com/Spillers-Technology/AnchorDesk" target="_blank" rel="noopener">Source &amp; quickstart <i data-feather="arrow-up-right"></i></a>
-          </div>
-        </div>
-      </article>
-
-      <article class="showcaseCard">
-        <button class="productShot lightbox-trigger" type="button" data-lightbox>
-          <img src="assets/comflow-inbox.jpg" alt="ComFlow inbox with a structured voicemail summary and triage state" width="1440" height="960">
-        </button>
-        <div class="showcaseBody">
-          <div class="productMeta"><span class="statusPill"><span></span> Running our line</span><span>Containerized</span></div>
-          <h3>ComFlow</h3>
-          <p class="productPitch">Turn missed calls into finished work.</p>
-          <p>A focused voicemail regulator—not a fake AI receptionist. It answers over SIP, records, transcribes, extracts urgency and intent, then sends reviewed calls to AnchorDesk.</p>
-          <ul class="compactPoints"><li>Bring your own SIP trunk</li><li>Pluggable speech and language providers</li><li>Single-team and hosted multi-tenant modes</li></ul>
-          <div class="productActions">
-            <a class="btn btnPrimary" href="tel:+13158981121">Call&nbsp;the&nbsp;live&nbsp;line</a>
-            <a class="textLink" href="https://github.com/Spillers-Technology/ComFlow" target="_blank" rel="noopener">Source &amp; container <i data-feather="arrow-up-right"></i></a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="proof" class="band bandAlt proofSection">
-    <div class="sectionHead splitHead">
-      <div><p class="eyebrow">Receipts over adjectives</p><h2>The pattern is the product.</h2></div>
-      <p>Support engineering means understanding the messy human workflow and the technical system at the same time.</p>
-    </div>
-    <div class="proofGrid">
-      <article><span>01</span><i data-feather="search"></i><h3>Find the drag</h3><p>Start with the queue, the handoff, or the recurring “somebody should check this” task—not a technology shopping list.</p></article>
-      <article><span>02</span><i data-feather="tool"></i><h3>Build the smallest honest system</h3><p>Make state visible, failures explainable, and operator actions auditable before adding magic.</p></article>
-      <article><span>03</span><i data-feather="activity"></i><h3>Run what ships</h3><p>AnchorDesk handles our support. ComFlow handles our phone line. The feedback loop stays short because we live in it.</p></article>
-    </div>
-    <div class="serviceCallout">
-      <div><p class="eyebrow">Custom work</p><h3>Got a fragile manual process?</h3><p>We build internal tools, operational dashboards, document pipelines, and provisioning workflows for teams who have outgrown “just remember to do it.”</p></div>
-      <a class="btn btnPrimary" href="mailto:help@spillerstech.us?subject=I%20have%20a%20fragile%20process">Tell us where it hurts <i data-feather="arrow-right"></i></a>
-    </div>
-  </section>
-
-  <section id="opensource" class="band openSection">
-    <div class="sectionHead splitHead">
-      <div><p class="eyebrow">Open source</p><h2>Please touch the machinery.</h2></div>
-      <p>Download it. Break it. File the weird issue. If you see a cleaner path, open the PR—we would genuinely love that.</p>
-    </div>
-
-    <div class="openGrid">
-      <article class="openCard featuredOpen">
-        <button class="lightbox-trigger" type="button" data-lightbox>
-          <img src="assets/netviz-graph.png" alt="NetViz graph view grouping discovered network devices" loading="lazy">
-        </button>
-        <div><span class="openTag">Go · Wails · MIT</span><h3>NetViz</h3><p>Fast, visual LAN discovery with desktop builds for Windows, macOS, and Linux. No account, agent, or Nmap required.</p><div class="openActions"><a href="https://github.com/Spillers-Technology/netviz/releases/latest" target="_blank" rel="noopener">Download <i data-feather="download"></i></a><a href="https://github.com/Spillers-Technology/netviz" target="_blank" rel="noopener">Source <i data-feather="github"></i></a></div></div>
-      </article>
-      <article class="openCard"><span class="openIcon"><i data-feather="cloud"></i></span><span class="openTag">ASP.NET Core · React</span><h3>Partner Center Bridge</h3><p>Cross-tenant Microsoft Graph and Partner Center workflows without the portal archaeology.</p><div class="openActions"><a href="https://spillerstech.us/PartnerCenterBridge/" target="_blank" rel="noopener">Explore</a><a href="https://github.com/Spillers-Technology/PartnerCenterBridge" target="_blank" rel="noopener">Source</a></div></article>
-      <article class="openCard"><span class="openIcon"><i data-feather="printer"></i></span><span class="openTag">Spring Boot · Java 21 · MIT</span><h3>RetroSpool</h3><p>Capture, split, and render IBM i spool files as PDFs without printer-session emulation.</p><div class="openActions"><a href="https://spillerstech.us/RetroSpool/" target="_blank" rel="noopener">Explore</a><a href="https://github.com/Spillers-Technology/RetroSpool" target="_blank" rel="noopener">Source</a></div></article>
-      <article class="openCard"><span class="openIcon"><i data-feather="compass"></i></span><span class="openTag">React Native · Expo · MIT</span><h3>OpsQuest</h3><p>A playable support-skills lab with realistic tickets, coaching, debriefs, and downloadable Android builds.</p><div class="openActions"><a href="https://github.com/Spillers-Technology/OpsQuest/releases" target="_blank" rel="noopener">Get the app</a><a href="https://github.com/Spillers-Technology/OpsQuest" target="_blank" rel="noopener">Source</a></div></article>
-    </div>
-  </section>
-
-  <section id="about" class="band founderSection">
-    <div class="founderMonogram" aria-hidden="true"><span>JS</span><small>BUILDER<br>OPERATOR</small></div>
-    <div class="founderCopy">
-      <p class="eyebrow">Founder-led, on purpose</p>
-      <h2>Hi, I’m Joseph “Joey” Spillers.</h2>
-      <p class="founderLead">I’m a computer-science-trained support engineer who builds the tool when the runbook stops being enough.</p>
-      <p>My career has moved through full-stack development, MSP DevOps, Tier 2 support, and document operations. That mix is the point: I can sit with the person doing the work, trace the system underneath it, and ship something both sides can trust.</p>
-      <div class="founderFacts"><span><strong>B.S. Computer Science</strong>Honors · 3.8 GPA</span><span><strong>Support → DevOps III</strong>Promoted in 18 months</span><span><strong>Indianapolis based</strong>Working across the messy middle</span></div>
-      <div class="founderLinks"><a href="https://spilloid.github.io" target="_blank" rel="noopener">Full portfolio <i data-feather="arrow-up-right"></i></a><a href="https://www.linkedin.com/in/joseph-spillers-ba6a491b5/" target="_blank" rel="noopener">LinkedIn <i data-feather="linkedin"></i></a><a href="https://github.com/spilloid" target="_blank" rel="noopener">Personal GitHub <i data-feather="github"></i></a></div>
-    </div>
-  </section>
-
-  <section class="finalCta">
-    <p class="eyebrow">Your move</p>
-    <h2>Hire the builder. Pilot the product. Open the PR.</h2>
-    <p>All three doors are open.</p>
-    <div class="ctaRow"><a class="btn btnPrimary" href="mailto:help@spillerstech.us?subject=Let's%20work%20together"><i data-feather="mail"></i> help@spillerstech.us</a><a class="btn btnGhost" href="tel:+13158981121"><i data-feather="phone"></i> (315)&nbsp;898&#8209;1121</a></div>
-    <small>Email opens a real AnchorDesk ticket. The phone is handled by ComFlow. Yes, we eat our own dog food.</small>
-  </section>
-</main>
-
-<footer class="footer">
-  <a class="wordmark" href="#top"><span class="mark">ST</span><span class="wordmarkText">Spillers <strong>Technology</strong></span></a>
-  <div class="footerLinks"><a href="https://github.com/Spillers-Technology" target="_blank" rel="noopener">GitHub</a><a href="https://spilloid.github.io" target="_blank" rel="noopener">Joey’s portfolio</a><a href="mailto:help@spillerstech.us">Support</a></div>
-  <p class="footerFine">© 2026 Spillers Technology · Independent software studio · Built in the queue</p>
-</footer>
-
-<script>
-  window.addEventListener('DOMContentLoaded', function () {
-    if (window.feather) feather.replace();
-  });
-</script>
+  <footer class="footer">
+    <a class="wordmark" href="#top"><span class="mark" aria-hidden="true">ST</span><span class="wordmarkText">Spillers <strong>Technology</strong></span></a>
+    <nav class="footerLinks" aria-label="Footer navigation">
+      <a href="https://github.com/Spillers-Technology" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:help@spillerstech.us">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p class="footerFine">© 2026 Joseph Spillers · Spillers Technology · Independent software studio</p>
+  </footer>
 </body>
 </html>

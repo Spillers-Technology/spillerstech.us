@@ -9,11 +9,11 @@
     <div class="image-lightbox__shell">
       <button class="image-lightbox__close" type="button" aria-label="Close image preview">&times;</button>
       <div class="image-lightbox__viewport">
-        <img class="image-lightbox__image" alt="">
+        <img class="image-lightbox__image" alt="" tabindex="0" role="button" aria-label="Toggle actual-size zoom" aria-pressed="false">
       </div>
       <div class="image-lightbox__footer">
         <span class="image-lightbox__caption"></span>
-        <span class="image-lightbox__hint">Click image for actual size &middot; Esc to close</span>
+        <span class="image-lightbox__hint">Tap or press Enter to zoom &middot; Esc to close</span>
       </div>
     </div>`;
   document.body.append(dialog);
@@ -37,6 +37,7 @@
     if (!sourceImage) return;
     activeTrigger = trigger;
     preview.classList.remove("is-zoomed");
+    preview.setAttribute("aria-pressed", "false");
     preview.src = trigger.dataset.lightboxSrc || sourceImage.currentSrc || sourceImage.src;
     preview.alt = sourceImage.alt || "Full-size preview";
 
@@ -48,6 +49,11 @@
     closeButton.focus({ preventScroll: true });
   };
 
+  const toggleZoom = () => {
+    const isZoomed = preview.classList.toggle("is-zoomed");
+    preview.setAttribute("aria-pressed", String(isZoomed));
+  };
+
   triggers.forEach((trigger) => {
     const sourceImage = trigger.matches("img") ? trigger : trigger.querySelector("img");
     if (!sourceImage) return;
@@ -56,7 +62,7 @@
       trigger.setAttribute("role", "button");
     }
     trigger.setAttribute("aria-haspopup", "dialog");
-    trigger.setAttribute("aria-label", `Open full-size preview: ${sourceImage.alt || "product image"}`);
+    trigger.setAttribute("aria-label", `Expand full-size preview: ${sourceImage.alt || "product image"}`);
     trigger.title = trigger.title || "Open full-size preview";
 
     const host = trigger;
@@ -85,7 +91,12 @@
   });
 
   closeButton.addEventListener("click", close);
-  preview.addEventListener("click", () => preview.classList.toggle("is-zoomed"));
+  preview.addEventListener("click", toggleZoom);
+  preview.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    toggleZoom();
+  });
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog || event.target.classList.contains("image-lightbox__viewport")) close();
   });
@@ -95,6 +106,8 @@
   });
   dialog.addEventListener("close", () => {
     preview.removeAttribute("src");
+    preview.classList.remove("is-zoomed");
+    preview.setAttribute("aria-pressed", "false");
     activeTrigger?.focus({ preventScroll: true });
   });
   document.addEventListener("keydown", (event) => {
